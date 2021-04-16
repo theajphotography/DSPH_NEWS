@@ -1,0 +1,190 @@
+body
+{
+
+background: #292929;
+}
+a
+{
+ text-decoration:none;
+}
+b,p,h2
+{
+color : white;
+}
+#aboutus{
+color : white;
+float:center;
+}
+#aut{
+color : white;
+font-size: 150%;
+}
+.top
+{
+    width:100%;
+    height:10%;
+    position: fixed;
+    color:white;
+    background:#282828;
+    overflow:hidden;
+}
+
+.fixed1
+{
+    position:fixed;
+}
+.line
+{
+    height: .5em;
+    background: #8EE4AF;
+}
+.logo
+{
+ background: #3500D3;
+ float:left;
+ border-radius:5em;
+ box-shadow:0px 0px 10px grey;
+ width:15%;
+ margin-left:0%;
+ margin-top:0%;
+ color:white;
+ text-align:center;
+ overflow:hidden;
+}
+.menu
+{
+ float:center;
+ width:70%;
+}
+.menu a
+{
+ text-decoration:none;
+ text-align:center;
+ color:white;
+ box-shadow:0px 0px 5px grey;
+ display:inline-block;
+ background: #3500D3;
+ padding:1%;
+ border-top-right-radius:2em;
+ border-bottom-right-radius:2em;
+ width:15%;
+ hight:50%;
+ margin-top:1%;
+}
+.main
+{
+ height:50%;
+ padding-top:2%;
+ margin-top:0%;
+ max-height:50%;
+ width:100%;
+ background-color:#282828;
+ overflow:hidden;
+}
+
+.news
+{
+
+ margin-top:3%;
+ width:30%;
+ padding:5px;
+ height:100%;
+ float:left;
+ overflow:hidden;
+
+}
+.posts
+{
+ width:100%;
+ padding:5px;
+ height:110%;
+}
+.content
+{
+ box-shadow:0px 0px 5px grey;
+ padding:2px;
+ margin:20px;
+
+}
+
+.art-content
+{
+ box-shadow:0px 0px 5px grey;
+ padding:2px;
+ margin:20px;
+ width:100%;
+ text-color:white;
+}
+.art
+{
+ border-left: 5px solid grey;
+ border-right: 5px solid grey;
+ float:left;
+ margin-top:3%;
+ padding:5px;
+ width:39%;
+
+}
+.footer
+{
+ margin:2em auto;
+ background:#black;
+ overflow:hidden;
+ color:white;
+}
+.desc
+{
+margin-top:auto;
+ border-radius:5em;
+ box-shadow:0px 0px 50px grey;
+ width:35em;
+ text-align:center;
+ float:right;
+ margin-left:1em;
+ background: #3500D3;
+}
+.img1
+{
+ margin-right:5px;
+  border: 1px solid #ddd; /* Gray border */
+  border-radius: 4px;  /* Rounded border */
+  width:300px; /* Set a small width */
+  height:200px;
+}
+
+.seesion
+{
+ background: #3500D3;
+ float:right;
+ border-radius:5em;
+ box-shadow:0px 0px 50px grey;
+ width:20em;
+ margin-right:0%;
+ color:white;
+ text-align:center;
+ overflow:hidden;
+}
+
+
+.news1
+{
+ color:#FFFFFF;
+ width:30%;
+ margin-top:3%;
+ padding:10px;
+ height:70%;
+ float:right;
+}
+
+.content1
+{
+ box-shadow:0px 0px 5px grey;
+ padding:2px;
+ margin:20px;
+}
+
+.a-content
+{
+    color:#FFFFFF;
+}
+

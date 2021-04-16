@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+
+{% block title %} Covid-19 News {% endblock title %}
+{% block Cov19active %} active {% endblock Cov19active %}
+{% block body %}
+
+
+<h5 class="card-header">Covid-19 News</h5>
+<div class="row">
+  {% load static %}
+
+  {% for i,j in datac.items %}
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text">{{ j }}</p>
+        <a href="{{ i }}" class="btn btn-primary">Read More</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ i }}" target="_blank"><img
+            src="{% static 'img/facebook-logo-3.png' %}" height="5%" width="5%"></a>
+        <a href="https://twitter.com/intent/tweet?text={{ j }}&url={{ i }}" target="_blank"><img
+            src="{% static 'img/twitter.png' %}" height="7%" width="7%"></a>
+        <a href="https://web.whatsapp.com/send?text={{ i }}" target="_blank"><img src="{% static 'img/whatsapp.jpg' %}"
+            height="5%" width="5%"></a>
+
+
+      </div>
+
+    </div>
+  </div>
+
+  {% endfor %}
+
+</div>
+
+{% endblock body%}
