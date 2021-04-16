@@ -4,9 +4,52 @@
 {% block title %} Covid-19 News {% endblock title %}
 {% block Cov19active %} active {% endblock Cov19active %}
 {% block body %}
+<h3 class="card-header"><span id="typed"></span></h3>
 
 
-<h5 class="card-header">Covid-19 News</h5>
+<script>
+  var typed = new Typed('#typed', {
+    strings: ["Covid-19 News"],
+    backSpeed: 15,
+    smartBackspace: true,
+    backDelay: 1200,
+    startDelay: 1000,
+    typeSpeed: 25,
+    loop: true,
+
+  });
+</script>
+
+
+<div class="row">
+  {% load static %}
+
+  {% for i,j in datac.items %}
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text">{{ j }}</p>
+        <a href="{{ i }}" onclick="return false;" class="btn btn-primary">Read More</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ i }}" target="_blank"><img
+            src="{% static 'img/facebook-logo-3.png' %}" height="5%" width="5%"></a>
+        <a href="https://twitter.com/intent/tweet?text={{ j }}&url={{ i }}" target="_blank"><img
+            src="{% static 'img/twitter.png' %}" height="7%" width="7%"></a>
+        <a href="https://web.whatsapp.com/send?text={{ i }}" target="_blank"><img src="{% static 'img/whatsapp.jpg' %}"
+            height="5%" width="5%"></a>
+
+
+      </div>
+
+    </div>
+  </div>
+
+  {% endfor %}
+
+</div>
+
+
+<!-- <h5 class="card-header">Covid-19 News</h5>
 <div class="row">
   {% load static %}
 
@@ -32,6 +75,6 @@
 
   {% endfor %}
 
-</div>
+</div> -->
 
 {% endblock body%}

@@ -4,7 +4,23 @@
 {% block homeactive %} active {% endblock homeactive %}
 {% block body %}
 
-<h5 class="card-header">Today's Headlines</h5>
+<h3 class="card-header"><span id="typed"></span></h3>
+
+
+<script>
+    var typed = new Typed('#typed', {
+        strings: ["Toady's headlines"],
+        backSpeed: 15,
+        smartBackspace: true,
+        backDelay: 1200,
+        startDelay: 1000,
+        typeSpeed: 25,
+        loop: true,
+
+    });
+</script>
+
+
 <div class="row">
     {% load static %}
 
@@ -14,7 +30,7 @@
             <div class="card-body">
                 <h5 class="card-title"></h5>
                 <p class="card-text">{{ j }}</p>
-                <a href="{{ i }}" class="btn btn-primary">Read More</a>
+                <a href="{{ i }}" onclick="return false;" class="btn btn-primary">Read More</a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u={{ i }}" target="_blank"><img
                         src="{% static 'img/facebook-logo-3.png' %}" height="5%" width="5%"></a>
                 <a href="https://twitter.com/intent/tweet?text={{ j }}&url={{ i }}" target="_blank"><img

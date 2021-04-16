@@ -430,6 +430,30 @@ def Covid(request):
         data1[links[i]]=news[i]
         i+=1
     return render(request, "home/Covid.html", {'datac': data1} )
+def test(request):
+    page = requests.get("https://www.divyabhaskar.co.in/business/")
+    soup = BeautifulSoup(page.content, 'html.parser')
+    li_1 = soup.find_all("li", {"class", "_24e83f49"})
+    print(li_1)
+    news = []
+    links = []
+    c = 1
+    for i in li_1:
+        print("=" * 50)
+        a_1 = i.find("a")
+        links.append("https://www.divyabhaskar.co.in/business/"+a_1.get("href"))
+        div_2 = a_1.find("div")
+        h3_1 = div_2.find("h3")
+        news.append(h3_1.text.strip())
+        c += 1
+    data1 = {}
+    c=0
+    for i in range(len(links)):
+        if i == 30:
+            break
+        data1[links[i]]=news[i]
+        i+=1
+    return render(request, "home/test.html", {'datatest': data1} )
 
 
 
